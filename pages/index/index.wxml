@@ -8,3 +8,9 @@
 <view class="item" wx:for="id" wx:for="{{navs}}" wx:for-item="v" wx:for-index="i">{{v.name}}{{i}}
 </view>
 </view>
+
+<swiper>
+<swiper><image src='assets/img/originals.png'></image></swiper>
+<swiper><image src='assets/img/originals.png'></image></swiper>
+<swiper><image src='assets/img/neo.png'></image></swiper>
+</swiper>
