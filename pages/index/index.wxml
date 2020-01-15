@@ -1,0 +1,6 @@
+<view class="nav">
+<view class="item">項目</view>
+<view class="item">文件</view>
+<view class="item">编辑</view>
+<view class="item">工具</view>
+</view>

@@ -1,0 +1,12 @@
+.nav {
+display: flex;
+background: #f0f0f0;
+padding: 5rpx;
+}
+
+
+.item{
+  flex: 1;
+  text-align: center;
+  
+}
