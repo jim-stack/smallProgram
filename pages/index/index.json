@@ -1,7 +1,10 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "SearchInput":"../../components/SearchInput/SearchInput"
+  },
   "backgroundTextStyle":"light",
   "navigationBarBackgroundColor": "#000",
   "navigationBarTitleText": "黑🐎优购",
   "navigationBarTextStyle": "white"
 }
+

@@ -1,0 +1,6 @@
+<view class="searchInput">
+  <view  class="searchContent">
+    {{title}}
+  </view>
+</view>
+<!-- <view bindtap="handleTap">  点我之后 传值给老爸 </view> -->

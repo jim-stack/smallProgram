@@ -1,23 +1,65 @@
-.item{
-  flex: 12;
+.nav {
+  display: flex;
+  background-color: #f0f0f0;
+  padding: 5rpx;
+}
+
+.item {
+  flex: 1;
   text-align: center;
 }
 
-.searchInput{
-  width: 100%;
-  background-color: #000;
+.searchInput {
+  /* width: 100%;
+  background-color: #EA4350;
   height: 100rpx;
   display: flex;
-  align-items:center;
-  justify-content: center; 
+  align-items: center;
+  justify-content: center; */
+  width: 750rpx;
+  background-color: var(--themeColor);
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.searchContent{
+.searchContent {
+  /* width: 700rpx;
+  height: 80rpx;
+  background-color: #FFFFFF;
+  border-radius: 5rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
   width: 700rpx;
-  height:80rpx;
+  height: var(--searchInputHeiht);
   background-color: #fff;
   border-radius: 5rpx;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.index_pyg .index_swiper swiper{
+  height: 340rpx;
+}
+.h-class{
+  color:red;
+}
+
+.index_navs{
+  display: flex;
+}
+.index_navs navigator{
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.index_navs navigator image{
+  width: 128rpx;
+  height: 140rpx;
+}
+
+
+

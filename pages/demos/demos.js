@@ -12,28 +12,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log("小程序 demos 页面 加载的时候...");
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log("小程序 demos 页面 已经准备好了...");
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log("小程序 demos 页面 可以看见了...");
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    console.log("小程序 demos 页面 被隐藏了...");
   },
 
   /**

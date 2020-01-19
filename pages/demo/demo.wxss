@@ -1,1 +1,6 @@
-/* pages/demo/demo.wxss */
+.demo img {
+  width: 100%;
+}
+.demo div {
+  font-size: 100rpx;
+}

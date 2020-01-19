@@ -5,17 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-    bnrUrl:[{
-      
-    }]
-    }
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'https://api.zbztb.cn/api/public/v1/home/swiperdata',
+      success: (res) => {
+        // setData 设置属性
+        //  this.swiper_list = res.data.message
+        //  console.log(this.swiper_list)
+        this.setData({
+          swiper_list: res.data.message
+        })
+      }
+    })
   },
 
   /**

@@ -1,2 +1,6 @@
 <!--pages/demo/demo.wxml-->
 <text>pages/demo/demo.wxml</text>
+<navigator url="/pages/demos/demos" open-type="redirect">跳转 不保留页面</navigator>
+<navigator url="/pages/demos/demos" open-type="navigate">跳转  保留页面</navigator>
+<navigator url="/pages/index/index" open-type="switchTab">跳转  跳到tab页面</navigator>
+<navigator url="/pages/index/index" open-type="navigate">跳转  跳到tab页面 open-type 是navigator</navigator>

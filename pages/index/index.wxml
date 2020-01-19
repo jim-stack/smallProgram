@@ -1,16 +1,25 @@
-<view class="searchInput">
-<view data-id="{{id}}" class="searchContent">
-{{searchText}}
-</view>
+<view class="index_pyg">
+  <view class="index_search">
+   <search-input  bind:myChildEvent="handleChildEvent"/>
+  </view>
+  <!-- 轮播图 开始 -->
+  <view class="index_swiper">
+    <swiper indicator-dots="true" autoplay="true" circular="true">
+      <swiper-item wx:for="{{swiper_list}}" wx:key="goods_id">
+        <navigator url="{{item.navigator_url}}" open-type="{{item.open_type}}">
+          <image src="{{item.image_src}}" mode="widthFix"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图 结束 -->
 </view>
 
-<view class="nav">
-<view class="item" wx:for="id" wx:for="{{navs}}" wx:for-item="v" wx:for-index="i">{{v.name}}{{i}}
+<!-- 图片导航开始 -->
+<view class="index_navs">
+<navigator wx:for="{{navs}}" wx:key="index">
+<image src="{{item.image_src}}" mode="widthFix"></image>
+</navigator>
 </view>
-</view>
+<!-- 图片导航结束 -->
 
-<swiper>
-<swiper><image src='assets/img/originals.png'></image></swiper>
-<swiper><image src='assets/img/originals.png'></image></swiper>
-<swiper><image src='assets/img/neo.png'></image></swiper>
-</swiper>

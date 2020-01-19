@@ -1,0 +1,20 @@
+.searchInput {
+
+  width: 750rpx;
+  background-color:var(--themeColor);
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchContent {
+
+  width: 700rpx;
+  height: 80rpx;
+  background-color: #fff;
+  border-radius: 5rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
