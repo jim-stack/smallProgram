@@ -40,6 +40,8 @@
   align-items: center;
   justify-content: center;
 }
+
+
 .index_pyg .index_swiper swiper{
   height: 340rpx;
 }
@@ -50,16 +52,45 @@
 .index_navs{
   display: flex;
 }
+
 .index_navs navigator{
+  margin-top:8rpx;
+  margin-bottom: 43rpx; 
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: center;
 }
+
 .index_navs navigator image{
   width: 128rpx;
   height: 140rpx;
 }
 
+.index_floor  .floor_group .floor_list navigator {
+  float: left;
+  width: 249.975rpx;
+}
+.index_floor  .floor_group .floor_list navigator:nth-child(1){
+  border-left: 10rpx solid #fff;
+}
+
+.index_floor  .floor_group .floor_list navigator:nth-last-child(-n+4)  {
+   height: 199.63437499999998rpx;
+   border-left: 10rpx solid #fff; 
+}
+
+
+.index_floor .floor_group .floor_list navigator:nth-child(2) {
+  border-bottom: 10rpx solid #fff;
+}
+
+.index_floor .floor_group .floor_list navigator:nth-child(3) {
+  border-bottom: 10rpx solid #fff;
+}
+
+.index_floor .floor_group .floor_list navigator image {
+  height: 100%;
+}
 
 

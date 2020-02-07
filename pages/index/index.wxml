@@ -1,7 +1,8 @@
-<view class="index_pyg">
-  <view class="index_search">
-   <search-input  bind:myChildEvent="handleChildEvent"/>
-  </view>
+<view class="pyg_index">
+  <!-- 搜索框 开始 -->
+  <SearchInput></SearchInput>
+  <!-- 搜索框 结束 -->
+  
   <!-- 轮播图 开始 -->
   <view class="index_swiper">
     <swiper indicator-dots="true" autoplay="true" circular="true">
@@ -22,4 +23,33 @@
 </navigator>
 </view>
 <!-- 图片导航结束 -->
+
+<!-- 图片楼层开始 -->
+ <view class="index_floor">
+    <view class="floor_group"
+    wx:for="{{ floor_list }}"
+    wx:for-item="item1"
+    wx:for-index="index1"
+    wx:key="floor_title"
+    >
+      <!-- 标题 -->
+      <view class="floor_title">
+        <image mode="widthFix" src="{{item1.floor_title.image_src}}"></image>
+      </view>
+      <!-- 内容 -->
+      <view class="floor_list">
+        <navigator 
+        wx:for="{{item1.product_list}}"
+        wx:for-item="item2"
+        wx:for-index="index2"
+        wx:key="name"
+        url="{{item2.navigator_url}}"
+        >
+        <image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}"></image>
+      </navigator>
+      </view>
+    </view>
+  </view>
+<!-- 图片楼层结束 -->
+
 

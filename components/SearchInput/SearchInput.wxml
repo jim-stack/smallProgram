@@ -1,5 +1,5 @@
 <view class="searchInput">
-  <view  class="searchContent">
+  <view class="searchContent">
     {{title}}
   </view>
 </view>

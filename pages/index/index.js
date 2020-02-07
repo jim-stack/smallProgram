@@ -40,7 +40,8 @@ Page({
     //   values: ["😀", "/(ㄒoㄒ)/~~", "佛系"]
     // }]
     swiper_list: [],
-    navs:[]
+    navs:[],
+    floor_list:[]
   },
   handleTap: function (e) {
     console.log(e);
@@ -71,6 +72,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 轮播图
     wx.request({
       url: 'https://api.zbztb.cn/api/public/v1/home/swiperdata',
       success: (res) => {
@@ -83,15 +85,29 @@ Page({
       }
     })
 
+    // 导航条
     wx.request({
-      url: 
-      'https://api.zbztb.cn/api/public/v1/home/catitems',
+      url:'https://api.zbztb.cn/api/public/v1/home/catitems',
       success: (res) => {
         // setData 设置属性
-        //  this.swiper_list = res.data.message
+        //  this.navs = res.data.message
          console.log(res);
         this.setData({
           navs:res.data.message
+        })
+      }
+    })
+
+    // 楼层
+    wx.request({
+      url:
+        'https://api.zbztb.cn/api/public/v1/home/floordata',
+      success: (res) => {
+        // setData 设置属性
+        //  this.floor = res.data.message
+        console.log(res);
+        this.setData({
+          floor_list: res.data.message
         })
       }
     })

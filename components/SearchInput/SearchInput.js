@@ -6,7 +6,8 @@ Component({
   properties: {
     title: {
       type: String,
-      value: "搜索"
+      value: "搜索",
+      focus:false
     }
   },
 
