@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/demos/demos",
     "pages/demo/demo",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/cart/index",
+    "pages/user/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,13 +29,13 @@
         "selectedIconPath": "assets/icons/category-o.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/cart/index",
         "text": "购物车",
         "iconPath": "assets/icons/cart.png",
         "selectedIconPath": "assets/icons/cart-o.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/user/index",
         "text": "我的",
         "iconPath": "assets/icons/my.png",
         "selectedIconPath": "assets/icons/my-o.png"

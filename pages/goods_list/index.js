@@ -1,4 +1,5 @@
 // pages/goods_list/index.js
+
 Page({
 
   /**

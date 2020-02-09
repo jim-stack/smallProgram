@@ -16,7 +16,7 @@
   <!-- 左边菜单栏结束 -->
 
   <!-- 右边内容开始 -->
-  <scroll-view scroll-y class="demos_right">
+  <scroll-view scroll-y class="demos_right" scroll-top="scroll_top">
   <!-- 产品列表开始 -->
   <view class="categories_right_content" wx:for="{{rightContent}}" wx:key="index">
 

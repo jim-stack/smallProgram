@@ -74,7 +74,7 @@ Page({
   onLoad: function (options) {
     // 轮播图
     wx.request({
-      url: 'https://api.zbztb.cn/api/public/v1/home/swiperdata',
+      url: 'https://www.linweiqin.cn/api/public/v1/home/swiperdata',
       success: (res) => {
         // setData 设置属性
         //  this.swiper_list = res.data.message
@@ -87,7 +87,7 @@ Page({
 
     // 导航条
     wx.request({
-      url:'https://api.zbztb.cn/api/public/v1/home/catitems',
+      url:'https://www.linweiqin.cn/api/public/v1/home/catitems',
       success: (res) => {
         // setData 设置属性
         //  this.navs = res.data.message
@@ -101,7 +101,7 @@ Page({
     // 楼层
     wx.request({
       url:
-        'https://api.zbztb.cn/api/public/v1/home/floordata',
+        'https://www.linweiqin.cn/api/public/v1/home/floordata',
       success: (res) => {
         // setData 设置属性
         //  this.floor = res.data.message
