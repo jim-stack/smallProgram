@@ -1,1 +1,50 @@
-/* pages/demos/demos.wxss */
+.pyg_demos .demos_list {
+  overflow: hidden;
+  height: calc(100vh - 100rpx);
+}
+.pyg_demos .demos_list .demos_left {
+  height: 100%;
+  width: 182rpx;
+  background-color: #f3f3f3;
+  float: left;
+}
+.pyg_demos .demos_list .demos_left .demos_left_item {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  text-align: center;
+  padding-top: 37rpx;
+}
+.pyg_demos .demos_list .demos_left .demos_left_item:nth-child(1) {
+  padding-top: 27rpx;
+}
+.pyg_demos .demos_list .demos_left .active {
+  color: var(--themeColor);
+  border-left: 4rpx solid #EA4350;
+}
+.pyg_demos .demos_list .demos_right {
+  height: 100%;
+  float: right;
+  width: calc(100vw - 182rpx);
+}
+.pyg_demos .demos_list .demos_right .categories_right_content {
+  overflow: hidden;
+}
+.pyg_demos .demos_list .demos_right .categories_right_content .demos_right_content_title {
+  font-size: 26rpx;
+  text-align: center;
+  padding-top: 28rpx;
+  padding-bottom: 21rpx;
+  color: #636363;
+}
+.pyg_demos .demos_list .demos_right .categories_right_content .demos_right_content_item {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+}
+.pyg_demos .demos_list .demos_right .categories_right_content .demos_right_content_item .image_wrapper image {
+  height: 120rpx;
+  width: 120rpx;
+}
+.pyg_demos .demos_list .demos_right .categories_right_content .demos_right_content_item .cat_name {
+  font-size: 21rpx;
+}

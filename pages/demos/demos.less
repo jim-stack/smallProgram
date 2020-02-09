@@ -1,0 +1,68 @@
+.pyg_demos {
+
+
+
+    .demos_list {
+        overflow: hidden;
+        height: calc(100vh - 100rpx);
+
+        .demos_left {
+            height: 100%;
+            width: 182rpx;
+            background-color: #f3f3f3;
+            float: left;
+
+            .demos_left_item {
+                font-size: 28rpx;
+                line-height: 40rpx;
+                text-align: center;
+                padding-top: 37rpx;
+
+                &:nth-child(1) {
+                    padding-top: 27rpx;
+                }
+            }
+
+            .active {
+                color: var(--themeColor);
+                border-left: 4rpx solid #EA4350;
+            }
+        }
+
+        .demos_right {
+            height: 100%;
+            float: right;
+            width: calc(100vw - 182rpx);
+
+            .categories_right_content {
+                overflow: hidden;
+
+                .demos_right_content_title {
+                    font-size: 26rpx;
+                    text-align: center;
+                    padding-top: 28rpx;
+                    padding-bottom: 21rpx;
+                    color: #636363;
+                }
+
+                .demos_right_content_item {
+                    width: 33.33%;
+                    float: left;
+                    text-align: center;
+
+                    .image_wrapper {
+                        image {
+                            height: 120rpx;
+                            width: 120rpx;
+                        }
+                    }
+
+                    .cat_name {
+                        font-size: 21rpx;
+                    }
+                }
+            }
+        }
+    }
+
+}

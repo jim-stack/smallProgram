@@ -1,6 +1,6 @@
 <view class="pyg_index">
   <!-- 搜索框 开始 -->
-  <SearchInput></SearchInput>
+  <SearchInput/>
   <!-- 搜索框 结束 -->
   
   <!-- 轮播图 开始 -->

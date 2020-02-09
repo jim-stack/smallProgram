@@ -15,16 +15,16 @@
     "selectedColor": "#E03440",
     "list": [
       {
-        "pagePath": "pages/demos/demos",
-        "text": "分类",
-        "iconPath": "assets/icons/category.png",
-        "selectedIconPath": "assets/icons/category-o.png"
-      },
-      {
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "assets/icons/home.png",
         "selectedIconPath": "assets/icons/home-o.png"
+      },
+      {
+        "pagePath": "pages/demos/demos",
+        "text": "分类",
+        "iconPath": "assets/icons/category.png",
+        "selectedIconPath": "assets/icons/category-o.png"
       },
       {
         "pagePath": "pages/index/index",
