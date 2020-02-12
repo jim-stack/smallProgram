@@ -1,118 +1,65 @@
+import { request } from "../../request/request.js"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    // searchText: "搜索",
-    // id: 10,
-    // navs: [{
-    //     id: 1,
-    //     name: "项目"
-    //   },
-    //   {
-    //     id: 2,
-    //     name: "文件"
-    //   },
-    //   {
-    //     id: 3,
-    //     name: "编辑"
-    //   },
-    //   {
-    //     id: 4,
-    //     name: "工具"
-    //   }
-    // ],
-    // message: 'Hello MINA!',
-    // // flag: false
-    // flag: true,
-    // a: 1,
-    // b: 2,
-    // c: 3,
-    // length: 6,
-    // name: "MINA",
-    // /* 两层循环 */
-    // tests: [{
-    //   id: 1,
-    //   values: ["😀", "/(ㄒoㄒ)/~~", "佛系"]
-    // }, {
-    //   id: 1,
-    //   values: ["😀", "/(ㄒoㄒ)/~~", "佛系"]
-    // }]
     swiper_list: [],
-    navs:[],
-    floor_list:[]
-  },
-  handleTap: function (e) {
-    console.log(e);
-    console.log(e.currentTarget.dataset.value);
-    console.table(e);
-    console.log(e.currentTarget.checked)
-  },
-  handleInput: function (e) {
-    console.table(e);
-
-  },
-  handleCheckboxChange: function (e) {
-    console.table(e);
-    console.log(e.detail)
-  },
-  getUserInfo: function (e) {
-    console.log(e);
-
-  },
-  //用于父子传值 子向父传值
-  handleChildEvent: function (e) {
-    console.log("进入到父节点事件中....");
-    console.table(e);
-    console.log(e.detail);
+    navs: [],
+    floor_list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 轮播图
-    wx.request({
-      url: 'https://www.linweiqin.cn/api/public/v1/home/swiperdata',
-      success: (res) => {
-        // setData 设置属性
-        //  this.swiper_list = res.data.message
-        //  console.log(this.swiper_list)
-        this.setData({
-          swiper_list: res.data.message
-        })
-      }
-    })
-
-    // 导航条
-    wx.request({
-      url:'https://www.linweiqin.cn/api/public/v1/home/catitems',
-      success: (res) => {
-        // setData 设置属性
-        //  this.navs = res.data.message
-         console.log(res);
-        this.setData({
-          navs:res.data.message
-        })
-      }
-    })
-
-    // 楼层
-    wx.request({
-      url:
-        'https://www.linweiqin.cn/api/public/v1/home/floordata',
-      success: (res) => {
-        // setData 设置属性
-        //  this.floor = res.data.message
-        console.log(res);
-        this.setData({
-          floor_list: res.data.message
-        })
-      }
-    })
+    this.getSwiper_list();
+    this.getNavs();
+    this.getFloor_list();
   },
+  
+  // 实现首页轮播图
+  //1. 要来拿到轮播图数据
+  //2. 配合使用一下  async await 
+  getSwiper_list: async function (e) {
+    // wx.request({
+    //   url: 'https://www.linweiqin.cn/api/public/v1/home/swiperdata',
+    //   success: (res) => {
+    //       console.log(res.data.message);
+    //       this.setData({
+    //         swiper_list:res.data.message
+    //       })
+    //   }
+    // })
+    const swiper_list = await request({
+      url: "/home/swiperdata"
+    });
+    this.setData({
+      swiper_list
+    })
 
+  },
+  //获取分类导航数据
+  getNavs: async function (e) {
+    const navs = await request({
+      url: "/home/catitems"
+    });
+    this.setData({
+      navs
+    })
+    console.log(navs);
+  },
+  // 获取楼层数据
+  getFloor_list: async function (e) {
+    const floor_list = await request({
+      url: "/home/floordata"
+    });
+    console.log(floor_list);
+    this.setData({
+      floor_list
+    });
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

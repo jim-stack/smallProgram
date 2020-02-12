@@ -1,4 +1,5 @@
 .searchInput {
+
   width: 750rpx;
   background-color:var(--themeColor);
   height: 100rpx;
@@ -8,6 +9,7 @@
 }
 
 .searchContent {
+
   width: 700rpx;
   height: 80rpx;
   background-color: #fff;
